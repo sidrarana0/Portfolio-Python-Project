@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'resume/style.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Sidra's Resume</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'resume/images/logo6.png' %}">
+  <style>
+    #hero {
+        background-image: url('{% static "resume/images/hero3.jpg" %}');
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        z-index: 1;
+    }
+    .my-button {
+      display: block;
+      margin-top: 10px; /* Add margin between paragraph and button */
+      padding: 5px 15px; /* Reduce padding to make the button smaller */
+      background-color: crimson;
+      color: white;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px; /* Reduce font size */
+      cursor: pointer;
+      border-radius: 15px; /* Adjust border radius */
+    }
+    
+    .my-button:hover {
+      background-color: white;
+      color: crimson;
+    }
+    
+    .my-button:active {
+      background-color: #ff5a5a;
+    }
+    .my-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: crimson; /* Set initial button color to crimson */
+      color: white;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+    
+    .my-button:hover {
+      background-color: white; /* Change button color to white on hover */
+      color: crimson; /* Change text color to crimson on hover */
+    }
+    
+    .my-button:active {
+      background-color: #ff5a5a; /* A slightly different shade of crimson for active state */
+    }
+        
+    /* Other CSS styles */
+</style>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>S</span>idra <span>S</span>hafiq</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+          
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Sidra Shafiq <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Recent <span>Projects</span></h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 1</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p><br><br>
+            <a href="https://example.com" class="my-button">See Project</a>
+          </div>
+          <div class="project-img">
+            <img src="{% static 'resume/images/project2.webp' %}">
+          </div>
+        </div>
+        
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 2</h1>
+            <h2>Another Project</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p><br><br>
+            <a href="https://example.com" class="my-button">See Project</a>
+          </div>
+          <div class="project-img">
+            <img src="{% static 'resume/images/project1.jpg' %}">
+          </div>
+        </div>
+        
+        <!-- Add more project-item blocks if needed -->
+        
+      </div>
+    </div>
+  </section>
+  
+        
+      
+      
+  </section>
+  <!-- End Projects Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="{% static 'resume/images/about.jpg' %}">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>Full Stack Developer</h2>
+        <p>Hi, I'm Sidra Shafiq, a seasoned full stack developer with expertise in HTML, CSS, JavaScript, Python, Django, and Next.js. I specialize in building dynamic, responsive websites and applications that deliver seamless user experiences. With a strong foundation in both front-end and back-end technologies, I bring comprehensive solutions to the table. Whether it's crafting clean, efficient code or designing intuitive interfaces, I am committed to excellence in every project. Let's connect and bring your ideas to life!</p>
+       <a href="{% static 'resume/images/SIDRA11.pdf' %}" target="_blank" class="cta">Download Resume</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <h1 class="section-title">Contact <span>Me</span></h1>
+      <div class="contact-box">
+        <form class="" method="POST" class="was-validated" action="#">
+          {% csrf_token %}
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Name">
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Email@gmail.com">
+          </div>
+          <div class="form-control">
+            <label for="concern">Concern</label>
+            <textarea id="concern" name="concern" rows="4" required placeholder="Concern"></textarea>
+          </div>
+          <button type="submit" class="my-button">Submit</button>
+        </form>
+        {% if submitted %}
+        <script>
+            Swal.fire({
+                title: 'Thank You!',
+                html: '<strong> <b>Form submitted successfully</strong>.',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                confirmButtonColor: 'crimson'
+            });
+        </script>
+        {% endif %}
+        
+      </div>
+      </div>
+    </div>
+    
+  </section>
+  
+  
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>S</span>idra <span>S</span>hafiq</h1>
+      </div>
+      <h2>Your Complete Web Solution</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/youtube.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/sidrarana0"><img src="https://img.icons8.com/bubbles/100/000000/github.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/sidra-shafiq-5510b2224"><img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.fiverr.com/sidrarana0?up_rollout=true"><img src="https://img.icons8.com/bubbles/100/000000/fiverr.png" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  
+  <!-- End Footer -->
+  <script src="{% static 'resume/script.js' %}"></script>
+
+</body>
+
+</html>
